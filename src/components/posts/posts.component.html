@@ -1,0 +1,14 @@
+<input type="text" (keyup.enter)="createPost(title)" #title>
+
+<h2>List of Posts</h2>
+<ul class="list-group">    
+    <li class="list-group-item" *ngFor="let post of posts">
+        
+        <button class="btn btn-default btn-sm" (click)="onUpdate(post)">Update</button>
+        <button class="btn btn-default btn-sm" (click)="onRemove(post)">Remove</button>
+        <span class="badge">{{ post.id }}</span>
+        <h4>{{ post.title }}</h4>
+        <p>{{ post.body }}</p>
+    
+</ul>
+

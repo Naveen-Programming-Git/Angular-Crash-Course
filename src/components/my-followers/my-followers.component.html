@@ -1,0 +1,29 @@
+<h1>My Followers</h1>
+
+<!-- <div class="testimonial main__three__testimonial">
+    <div class="container main__three__testimonial__container">
+        <div class="column main__three__testimonial__container__column">
+            <div class="citation main__three__testimonial__container__column__citation"
+                *ngFor="let follower of followers">
+                <div class="avatar main__three__testimonial__container__column__citation__avatar">
+                    <img src="{{follower.avatar_url}}" alt="avatar" width="100">
+                </div>
+                <div class="name main__three__testimonial__container__column__citation__name">
+                    <h3>{{follower.login}}</h3>
+                    <a href="follower.html_url">{{follower.html_url}}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+<div class="d-flex align-items-center" *ngFor="let follower of followers">
+    <div class="flex-shrink-0">
+        <img src="{{follower.avatar_url}}" alt="avatar" width="100">
+    </div>
+    <div class="flex-grow-1 ms-3">
+        <h3>{{follower.login}}</h3>
+        <a [routerLink]="['/profile', follower.login, follower.id ]" 
+        [queryParams]="{ page: 1, order: 'newest'}">{{follower.html_url}}</a>
+    </div>
+  </div>

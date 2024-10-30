@@ -1,0 +1,85 @@
+<!-- <div *ngIf="courses.length > 0; then coursesAvailable else noCourses"></div>
+
+<ng-template #coursesAvailable>
+    <h2>List of Courses</h2>
+    
+</ng-template>
+<ng-template #noCourses>
+    No Courses Available
+</ng-template> -->
+
+<!-- Hidden example: -->
+<!-- <div hidden>
+    No Courses Available
+</div>
+
+<div [hidden]="courses.length == 0">
+    No Courses Available
+</div> -->
+
+<!-- ngSwitch attibute: -->
+<!-- <ul class="nav nav-pills">
+    <li [class.active] = "viewMode == 'map'"><a (click)="viewMode = 'map'">Map View</a></li>
+    <li [class.active] = "viewMode == 'list'"><a (click)="viewMode = 'list'">List View</a></li>
+</ul>
+<div [ngSwitch]="viewMode">
+    <div *ngSwitchCase="'map'">Map View Content</div>
+    <div *ngSwitchCase="'list'">List View Content</div>
+</div> -->
+
+<!-- ngFor Directive -->
+<!-- <button (click)="onAdd()">Add</button>
+<ul>
+    <li *ngFor="let course of courses; let i = index; even as isEven">
+        {{ i }} - {{ course }} <span *ngIf="isEven">(Even)</span> 
+        <button (click)="onRemove(course)">Remove</button   >
+</ul> -->
+
+<!-- ngFor Directive with trackBy -->
+<!-- <button (click)="LoadCourses()">Load Courses</button>
+<button (click)="onAdd()">Add</button>
+<ul>
+    <li *ngFor="let course of courses; let i = index; even as isEven; trackBy : trackCourse" 
+        [style.background-color]="isEven ? 'lightblue' : ''">
+        {{ i }} - {{ course.name }} <span *ngIf="isEven">(Even)</span> 
+        <button (click)="onRemove(course)">Remove</button   >
+</ul> -->
+
+<!-- <input type="checkbox" [(ngModel)]="canSave" />
+<div>
+<button 
+    
+    [class.glyphicon-star]="canSave"
+    [class.glyphicon-star-empty]="!canSave"
+
+    [style.background-color]="canSave ? 'blue' : ''"
+    [style.color]="canSave ? 'white' : 'black'"
+    [style.font-weight]="canSave ? 'bold' : 'normal'"
+    [style.margin-right.px]='10'    
+>
+Save
+</button>
+
+<button 
+    [ngClass] = "{
+        'glyphicon-star': canSave,
+        'glyphicon-star-empty': !canSave
+    }"
+
+    [ngStyle]="{
+        'background-color': canSave ? 'blue' : '',
+        'color': canSave ? 'white' : 'black',
+        'font-weight': canSave ? 'bold' : 'normal',
+        'margin-left.px': '10px'
+    }"
+>
+Save
+</button>
+</div> -->
+
+<!-- safe traversal operator -->
+<!-- <span style="background-color: red;">{{ coursesArray[0].course?.name }}</span>
+
+<span style="background-color: green;">{{ coursesArray[1].course?.name }}</span> -->
+
+<input type="text" [appInputFormat]="'uppercase'"/>

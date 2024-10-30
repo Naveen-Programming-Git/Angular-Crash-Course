@@ -1,0 +1,16 @@
+<div>
+<div class="glyphicon glyphicon-heart " 
+[class.glyphicon-heart-liked]= "isLiked"
+[class.glyphicon-heart-default]= "!isLiked"
+(click)="onClick()">
+</div>
+<span class="likes-counter">{{likesCount}}</span>
+</div>
+
+<!-- <div class="glyphicon glyphicon-heart"
+(click)="onClick()">
+<div [(ngModel)]="isLiked" class="glyphicon-heart-liked" ></div>
+<div [(ngModel)]="isLiked" class="glyphicon-heart-default"></div>
+</div>
+<span class="pd-2">{{likesCount}}</span> -->
+
