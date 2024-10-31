@@ -1,5 +1,5 @@
 # Followed the below steps to add remote and push the first commit
-
+```
 PS C:\Naveen\My-Projects\hello-world> git init
 Reinitialized existing Git repository in C:/Naveen/My-Projects/hello-world/.git/
 PS C:\Naveen\My-Projects\hello-world> git add README.md
@@ -25,7 +25,7 @@ To https://github.com/Naveen-Programming-Git/AngularCrashCourse.git
  * [new branch]      main -> main
 branch 'main' set up to track 'origin-1/main'.
 PS C:\Naveen\My-Projects\hello-world> 
-
+```
 
 # HelloWorld
 
