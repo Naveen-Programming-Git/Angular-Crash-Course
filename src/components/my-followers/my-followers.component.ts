@@ -1,7 +1,6 @@
 import { NgFor } from '@angular/common';
 import { Component } from '@angular/core';
 import { MyFollowersService } from '../../services/my-followers.service';
-import { HttpClientModule } from '@angular/common/http';
 import { RouterLink, ActivatedRoute } from '@angular/router';
 import { combineLatest } from 'rxjs/internal/observable/combineLatest';
 import { map, switchMap} from 'rxjs/operators';
@@ -9,7 +8,7 @@ import { map, switchMap} from 'rxjs/operators';
 @Component({
   selector: 'app-my-followers',
   standalone: true,
-  imports: [NgFor, HttpClientModule, RouterLink],
+  imports: [NgFor, RouterLink],
   templateUrl: './my-followers.component.html',
   styleUrl: './my-followers.component.scss',
   providers: [MyFollowersService]

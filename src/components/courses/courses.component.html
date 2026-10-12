@@ -8,6 +8,16 @@
     No Courses Available
 </ng-template> -->
 
+@if (courses.length > 0) {
+    <h2>List of Courses</h2>
+    @for (course of courses; track trackCourse($index, course)) {
+        <li>{{ course.name }}</li>
+    }
+}
+@else {
+    <p>No Courses Available</p>
+}
+
 <!-- Hidden example: -->
 <!-- <div hidden>
     No Courses Available
@@ -82,4 +92,4 @@ Save
 
 <span style="background-color: green;">{{ coursesArray[1].course?.name }}</span> -->
 
-<input type="text" [appInputFormat]="'uppercase'"/>
+<!-- <input type="text" [appInputFormat]="'uppercase'"/> -->

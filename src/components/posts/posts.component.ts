@@ -1,5 +1,5 @@
 import { NgFor } from '@angular/common';
-import { HttpClient, HttpClientModule, HttpResponse } from '@angular/common/http';
+import { HttpResponse } from '@angular/common/http';
 import { Component, ErrorHandler, OnInit } from '@angular/core';
 import { PostsService } from '../../services/posts.service';
 import { error } from 'node:console';
@@ -11,7 +11,7 @@ import { AppErrorHandler } from '../../common/app-error-handler';
 @Component({
   selector: 'app-posts',
   standalone: true,
-  imports: [HttpClientModule, NgFor],
+  imports: [NgFor],
   templateUrl: './posts.component.html',
   styleUrl: './posts.component.scss',
   providers: [PostsService]

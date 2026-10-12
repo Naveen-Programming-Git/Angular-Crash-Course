@@ -1,5 +1,5 @@
 import { NgClass, NgFor, NgIf, NgStyle, NgSwitch, NgSwitchCase } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormsModule, NgModel } from '@angular/forms';
 import { app } from '../../../server';
 import { InputFormatDirective } from '../../directives/input-format.directive';
@@ -11,7 +11,7 @@ import { InputFormatDirective } from '../../directives/input-format.directive';
   templateUrl: './courses.component.html',
   styleUrl: './courses.component.scss'
 })
-export class CoursesComponent {
+export class CoursesComponent implements OnInit {
 
   courses : any = ["Course1", "Course2"]
   viewMode = 'map'
@@ -21,6 +21,9 @@ export class CoursesComponent {
                     { course : null}
                   ]
   
+  ngOnInit(): void {
+    this.LoadCourses();
+  }
 
   onAdd(){
     this.courses.push({id: 4, name: "Course4"});

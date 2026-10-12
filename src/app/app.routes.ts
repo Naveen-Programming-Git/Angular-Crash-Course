@@ -5,6 +5,7 @@ import { PostsComponent } from '../components/posts/posts.component';
 import { NotFoundComponent } from '../components/not-found/not-found.component';
 import { GithubProfileComponent } from '../components/github-profile/github-profile.component';
 import { ArchiveComponent } from '../components/archive/archive.component';
+import { CoursesComponent } from '../components/courses/courses.component';
 
 export const routes: Routes = [
     
@@ -12,8 +13,9 @@ export const routes: Routes = [
         { path: 'profile/:login/:id', component: GithubProfileComponent},
         { path: 'archive/:year/:month', component: ArchiveComponent},
         { path: 'followers', component: MyFollowersComponent},
-        { path: 'posts', component: PostsComponent},        
-        { path: '**', component: NotFoundComponent},
+        { path: 'posts', component: PostsComponent},
+        {path: 'courses', component: CoursesComponent},        
+        { path: '**', component: NotFoundComponent},        
 
         // { path: '', canActivate: [HomeComponent], children: [], pathMatch: 'full'},
         // { path: 'followers/:username', canActivate: [MyFollowersComponent],children: [], pathMatch: 'full'},
